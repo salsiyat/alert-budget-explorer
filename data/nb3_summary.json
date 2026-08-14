@@ -1,0 +1,31 @@
+{
+  "provenance_data_hash": "ae856397f4b4",
+  "models_dissected": [
+    "E05_flat_depth4",
+    "E08_dropout_bn",
+    "E10_2stage_intent_frozen"
+  ],
+  "models_skipped": {},
+  "domain_classifier_auc": 0.9125,
+  "mean_fpr_overshoot": 3.74,
+  "probe_gain_over_input": {
+    "E05_flat_depth4": 0.1051,
+    "E08_dropout_bn": 0.1022,
+    "E10_2stage_intent_frozen": 0.0765
+  },
+  "max_adjacent_cka": {
+    "E05_flat_depth4": 0.959,
+    "E08_dropout_bn": 0.9665,
+    "E10_2stage_intent_frozen": 0.9545
+  },
+  "largest_ablation_drop": {
+    "E05_flat_depth4": {
+      "layer": "h3",
+      "layer_contribution": 0.0915
+    },
+    "E08_dropout_bn": {
+      "layer": "h2",
+      "layer_contribution": 0.0566
+    }
+  }
+}

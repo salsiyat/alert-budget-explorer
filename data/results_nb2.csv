@@ -1,0 +1,17 @@
+experiment,params,trainable,recall_at_1pct_fpr,actual_fpr,macro_f1,accuracy,ece,cost,notes,recall_Worms,recall_Shellcode,recall_Backdoor,recall_Analysis
+E01_gradient_boosting,48796,48796,0.8896,0.0307,0.4905,0.6795,0.1615,251386,33s,0.75,0.9418,0.3979,0.3279
+E02_flat_depth1,26634,26634,0.8368,0.0374,0.4089,0.6485,0.1429,371283,depth=1 width=128,0.8182,0.8069,0.6244,0.1625
+E03_flat_depth2,43146,43146,0.855,0.0346,0.4245,0.664,0.1539,329832,depth=2 width=128,0.8182,0.8651,0.3756,0.4239
+E04_flat_depth3,59658,59658,0.8579,0.0423,0.4231,0.6639,0.1467,323566,depth=3 width=128,0.7955,0.873,0.5214,0.2821
+E05_flat_depth4,76170,76170,0.8627,0.0357,0.4204,0.6671,0.1426,312621,depth=4 width=128,0.8182,0.8413,0.1492,0.1521
+E06_dropout,76170,76170,0.8641,0.0343,0.4206,0.6697,0.1339,309368,"depth=4 {'dropout': 0.3, 'batchnorm': False} cat=onehot",0.8182,0.7831,0.0412,0.0
+E07_batchnorm,78218,77194,0.8435,0.0387,0.4119,0.6599,0.1401,356183,"depth=4 {'dropout': 0.0, 'batchnorm': True} cat=onehot",0.7273,0.4762,0.434,0.1699
+E08_dropout_bn,78218,77194,0.8769,0.044,0.4079,0.6638,0.1445,280577,"depth=4 {'dropout': 0.3, 'batchnorm': True} cat=onehot",0.8182,0.8175,0.0343,0.0
+E09_embeddings,62330,61306,0.8744,0.0415,0.406,0.6622,0.1393,286237,"depth=4 {'dropout': 0.3, 'batchnorm': True} cat=embed",0.8182,0.7619,0.048,0.0
+E10_2stage_intent_frozen,73273,55284,0.8588,0.0391,0.4374,0.6652,0.1418,321447,grouping=intent signal=softmax frozen=True width=104 budgeted=True,0.8182,0.7646,0.3671,0.2024
+E11_2stage_intent_ft,73273,72441,0.8572,0.0379,0.4226,0.6655,0.1526,325101,grouping=intent signal=softmax frozen=False width=104 budgeted=True,0.8182,0.8968,0.1389,0.003
+E12_2stage_k6_frozen,73348,55294,0.8583,0.0315,0.418,0.6683,0.1473,322365,grouping=empirical_k6 signal=softmax frozen=True width=104 budgeted=True,0.8182,0.8968,0.048,0.0561
+E13_2stage_k6_ft,73348,72516,0.8672,0.0372,0.4294,0.6742,0.1577,302278,grouping=empirical_k6 signal=softmax frozen=False width=104 budgeted=True,0.8182,0.8862,0.0274,0.0118
+E14_2stage_k6_logits,73348,55294,0.8653,0.0426,0.4272,0.6674,0.145,306926,grouping=empirical_k6 signal=logits frozen=True width=104 budgeted=True,0.8182,0.873,0.0274,0.2939
+E15_2stage_k6_penultimate,73538,55874,0.8542,0.0344,0.4299,0.6632,0.1409,331773,grouping=empirical_k6 signal=penultimate frozen=True width=104 budgeted=True,0.8182,0.8704,0.1475,0.4402
+E16_2stage_k6_unbudgeted,95690,77834,0.8574,0.0368,0.4223,0.66,0.1405,324510,grouping=empirical_k6 signal=penultimate frozen=True width=128 budgeted=False,0.8182,0.8571,0.0429,0.5007
