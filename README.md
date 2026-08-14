@@ -2,7 +2,7 @@
 
 An interactive tool for comparing intrusion detection models based on **attack detection, false alerts, and analyst workload**.
 
-**Live Tool:** https://saraalsiyat.github.io/alert-budget-explorer/
+**Live Tool:** https://salsiyat.github.io/alert-budget-explorer/
 
 Built for my MSDS 458 Deep Learning project at Northwestern University using the public UNSW-NB15 dataset.
 
